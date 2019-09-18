@@ -3,7 +3,8 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-    - nodejs:8.11.0 
+      nodejs: 10  
+       
     commands:
     - npm install --silent --no-progress -g npm
     - npm install --silent --no-progress -g serverless
