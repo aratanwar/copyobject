@@ -8,6 +8,8 @@ phases:
     commands:
     - npm install --silent --no-progress -g npm
     - npm install --silent --no-progress -g serverless
+    - erverless.yml
+    - deploy.sh
   pre_build:
     commands:
     - npm install --silent --no-progress
