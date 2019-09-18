@@ -9,7 +9,7 @@ phases:
     - npm install --silent --no-progress -g npm
     - npm install --silent --no-progress -g serverless
    # - serverless.yml
-    - serverless deploy
+    #- serverless deploy
   pre_build:
     commands:
     - npm install --silent --no-progress
