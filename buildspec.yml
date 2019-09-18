@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 10  
+      nodejs: 8  
        
     commands:
     - npm install --silent --no-progress -g npm
@@ -13,8 +13,8 @@ phases:
     - npm install --silent --no-progress
   build:
     commands:
-    - npm lint
-    - npm test
+    - npm run-script lint
+    - npm run test
     - mkdir -p target/stg
     - mkdir target/prod
     - serverless package --package target/stg --stage stg -v -r eu-central-1
