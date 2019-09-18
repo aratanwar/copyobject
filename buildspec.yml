@@ -13,7 +13,8 @@ phases:
     - npm install --silent --no-progress
   build:
     commands:
-    - npm run test
+    - npm lint
+    - npm test
     - mkdir -p target/stg
     - mkdir target/prod
     - serverless package --package target/stg --stage stg -v -r eu-central-1
