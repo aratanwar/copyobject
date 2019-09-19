@@ -97,8 +97,8 @@ functions:
 
 #    Define function environment variables here
     environment:
-       dest_bucket_name: ajay16920191
-       src_bucket_name: ajay1692019
+       dest_bucket_name: destinationbucket1992019
+       src_bucket_name: sourcebucket1992019
 
 # you can add CloudFormation resource templates here
 #resources:
