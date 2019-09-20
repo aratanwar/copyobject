@@ -1,4 +1,4 @@
-vversion: 0.2
+ovversion: 0.2
 
 phases:
   install:
@@ -20,7 +20,7 @@ phases:
     #- mkdir target/prod
     #- serverless package --package target/stg --stage stg -v -r eu-central-1
      #- serverless package --package target/prod --stage prod -v -r eu-central-1
-    - serverless remove 
+    - serverless deploy 
 
 artifacts:
   files:
