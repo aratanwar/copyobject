@@ -12,12 +12,12 @@ def hello(event, context):
     dest_bucket_name = os.environ['dest_bucket_name']
     #dest_object_name = 'DEST_OBJECT_NAME'
     response = client.list_objects(
-    Bucket='ajay1692019')
+    Bucket=src_bucket_name)
     if 'Contents' in response.keys(): 
         #print("Present, ", end =" ") 
         #print("value =", dict[key])
         try:
-          response = client.list_objects(Bucket='ajay1692019')['Contents']
+          response = client.list_objects(Bucket=src_bucket_name )['Contents']
           for b in response :
             l.append((b["Key"]))
           length = len(l)
