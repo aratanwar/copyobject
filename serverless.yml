@@ -65,7 +65,6 @@ functions:
      - s3:
         bucket: destinationbucket1992019
         event: s3:ObjectCreated:*
-        existing: true
         
         
 #    The following are a few example events you can configure
