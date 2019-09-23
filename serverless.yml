@@ -65,9 +65,6 @@ functions:
      - s3:
         bucket: destinationbucket1992019
         event: s3:ObjectCreated:*
-        rules:
-            - prefix: uploads
-            - suffix: .jpg
         existing: true
         
         
