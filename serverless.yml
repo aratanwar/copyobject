@@ -68,7 +68,7 @@ functions:
         rules:
             - prefix: uploads
             - suffix: .jpg
-          existing: true
+        existing: true
         
         
 #    The following are a few example events you can configure
