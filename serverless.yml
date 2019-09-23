@@ -59,7 +59,7 @@ provider:
 functions:
   hello:
     handler: handler.hello
-functions:
+functions1:
   eventTrigger:
     handler: handler.eventTrigger
     events:
