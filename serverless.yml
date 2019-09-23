@@ -59,6 +59,7 @@ provider:
 functions:
   hello:
     handler: handler.hello
+functions:
   eventTrigger:
     handler: handler.eventTrigger
     events:
