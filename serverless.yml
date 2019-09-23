@@ -59,6 +59,12 @@ provider:
 functions:
   hello:
     handler: handler.hello
+  eventTrigger:
+    handler: handler.eventTrigger
+    events:
+     - s3:
+        bucket: destinationbucket1992019
+        event:s3:ObjectCreated: *  
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
