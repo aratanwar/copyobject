@@ -25,7 +25,7 @@ provider:
   runtime: python3.7
 
 # you can overwrite defaults here
-# stage: dev
+  stage: ${stage}
 #  region: us-east-1
 
 # you can add statements to the Lambda function's IAM Role here
@@ -63,7 +63,7 @@ functions:
     handler: handler.eventTrigger
     events:
      - s3:
-        bucket: dest11-{self:provider:$stage}
+        bucket: dest11-${provider.stage}
         event: s3:ObjectCreated:*
         
         
@@ -106,8 +106,8 @@ functions:
 
 #    Define function environment variables here
     environment:
-       dest_bucket_name: dest11-{self:provider:$stage}
-       src_bucket_name: sorce11-{self:provider:$stage}
+       dest_bucket_name: dest11-${provider.stage}
+       src_bucket_name: sorce11-${provider.stage}
 
 # you can add CloudFormation resource templates here
 #resources:
