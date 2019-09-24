@@ -63,7 +63,7 @@ functions:
     handler: handler.eventTrigger
     events:
      - s3:
-        bucket: dest11-dev
+        bucket: "dest11-${opt:stage}"
         event: s3:ObjectCreated:*
         
         
@@ -105,9 +105,9 @@ functions:
 #            path: /hello
 
 #    Define function environment variables here
-#     environment:
-#        dest_bucket_name: dest11-dev
-#        src_bucket_name: sorce11-dev
+    environment:
+       dest_bucket_name: "dest11-${opt:stage}"
+       src_bucket_name: "sorce11-${opt:stage}"
 
 # you can add CloudFormation resource templates here
 #resources:
