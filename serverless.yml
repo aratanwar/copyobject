@@ -59,6 +59,9 @@ provider:
 functions:
   hello:
     handler: handler.hello
+    environment:
+      desti: dest11-${self:provider.stage}
+      source: source11-${self:provider.stage}
   eventTrigger:
     handler: handler1.eventTrigger
     events:
@@ -67,7 +70,5 @@ functions:
         event: s3:ObjectCreated:*
         existing: true
 
-    environment:
-      desti: dest11-${self:provider.stage}
-      source: source11-${self:provider.stage}
+    
 
