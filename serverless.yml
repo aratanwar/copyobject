@@ -63,8 +63,9 @@ functions:
     handler: handler.eventTrigger
     events:
      - s3:
-        bucket: dest11-dev
+        bucket: dest11-${self:provider.stage}
         event: s3:ObjectCreated:*
+        existing: true
 
     environment:
       desti: dest11-${self:provider.stage}
