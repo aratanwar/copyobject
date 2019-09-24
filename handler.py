@@ -7,9 +7,9 @@ def hello(event, context):
    
     l=[]
     client = boto3.client('s3')
-    src_bucket_name =os.environ['src_bucket_name']
+    src_bucket_name =os.environ['source']
     #src_object_name = 'Persistent_logo.png'
-    dest_bucket_name = os.environ['dest_bucket_name']
+    dest_bucket_name = os.environ['desti']
     #dest_object_name = 'DEST_OBJECT_NAME'
     response = client.list_objects(
     Bucket=src_bucket_name)
