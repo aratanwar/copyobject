@@ -67,6 +67,6 @@ functions:
         event: s3:ObjectCreated:*
 
     environment:
-      desti: desti11-${self:custom.one.${self:provider.stage}}
-      source: source11-${self:custom.one.${self:provider.stage}}
+      desti: dest11-${self:provider.stage}
+      source: source11-${self:provider.stage}
 
