@@ -1,4 +1,4 @@
-service: copyfilesfromsources3todestS3  
+service: copyfilesfromsources3todestS3
 provider:
   name: aws
   runtime: python3.7
