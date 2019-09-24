@@ -60,7 +60,7 @@ functions:
   hello:
     handler: handler.hello
   eventTrigger:
-    handler: handler.eventTrigger
+    handler: handler1.eventTrigger
     events:
      - s3:
         bucket: dest11-${self:provider.stage}
