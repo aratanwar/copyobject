@@ -105,9 +105,9 @@ functions:
 #            path: /hello
 
 #    Define function environment variables here
-#     environment:
-#        dest_bucket_name: "dest11-${opt:stage}"
-#        src_bucket_name: "sorce11-${opt:stage}"
+    environment:
+       dest_bucket_name: $env1
+       src_bucket_name: $env1
 
 # you can add CloudFormation resource templates here
 #resources:
