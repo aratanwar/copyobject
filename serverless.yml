@@ -27,9 +27,6 @@ provider:
 #    variable1: value1
 
 # you can add packaging information here
-package:
-  individually: true
-  exclude: "*/**"
 #  exclude:
 #    - README.md
 #    - buildspec.yml
