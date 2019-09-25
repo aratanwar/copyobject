@@ -31,9 +31,9 @@ package:
   individually: true
   exclude:
     - ./**
-  include:
-    - handler.py
-    - handler1.py
+#   include:
+#     - handler.py
+#     - handler1.py
 functions:
   hello:
     handler: handler.hello
