@@ -1,29 +1,17 @@
 version: 0.2
-
 phases:
   install:
     runtime-versions:
-      nodejs: 8 
-       
+      nodejs: 8    
     commands:
     - npm install --silent --no-progress -g npm
     - npm install --silent --no-progress -g serverless
-   # - serverless.yml
-    #- serverless deploy
   pre_build:
     commands:
     - npm install --silent --no-progress
   build:
     commands:
-    
-      #- mkdir -p target/stg
-    #- mkdir target/prod
-    #- serverless package --package target/stg --stage stg -v -r eu-central-1
-     #- serverless package --package target/prod --stage prod -v -r eu-central-1
-    - echo $stage
-    - cat serverless.yml
     - serverless deploy --stage $stage
-
 artifacts:
   files:
   - target/**/*
