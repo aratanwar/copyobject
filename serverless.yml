@@ -2,38 +2,16 @@ service: copyfilesfromsources3todestS3
 provider:
   name: aws
   runtime: python3.7
-
-# you can overwrite defaults here
   stage: ${opt:stage, 'qa'}
-#  region: us-east-1
-
-# you can add statements to the Lambda function's IAM Role here
   iamRoleStatements:
     - Effect: "Allow"
       Action:
         - "s3:*"
       Resource: "*"
-#    - Effect: "Allow"
-#      Action:
-#        - "s3:PutObject"
-#      Resource:
-#        Fn::Join:
-#          - ""
-#          - - "arn:aws:s3:::"
-#            - "Ref" : "ServerlessDeploymentBucket"
-#            - "/*"
-# you can define service wide environment variables here
-#  environment:
-#    variable1: value1
-
-# you can add packaging information here
 package:
   individually: true
   exclude:
     - ./**
-#   include:
-#     - handler.py
-#     - handler1.py
 functions:
   hello:
     handler: handler.hello
