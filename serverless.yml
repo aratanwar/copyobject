@@ -28,19 +28,27 @@ provider:
 
 # you can add packaging information here
 package:
- exclude:
-   - README.md
-   - buildspec.yml
-   - env.yml
+  individually: true
+  exclude: - ".*/**"
+#  exclude:
+#    - README.md
+#    - buildspec.yml
+#    - env.yml
 
 functions:
   hello:
     handler: handler.hello
+    package:
+      include:
+        - handler.py
     environment:
       desti: dest11-${self:provider.stage}
       source: source11-${self:provider.stage}
   eventTrigger:
     handler: handler1.eventTrigger
+    package:
+      include:
+        - handler1.py
     events:
      - s3:
         bucket: dest11-${self:provider.stage}
