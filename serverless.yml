@@ -29,9 +29,9 @@ provider:
 # you can add packaging information here
 package:
  exclude:
-  - README.md
-  - buildspec.yml
-  - env.yml
+   - README.md
+   - buildspec.yml
+   - env.yml
 
 functions:
   hello:
