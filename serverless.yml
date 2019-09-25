@@ -29,7 +29,7 @@ provider:
 # you can add packaging information here
 package:
   individually: true
-  exclude: - ".*/**"
+  exclude: ".*/**"
 #  exclude:
 #    - README.md
 #    - buildspec.yml
