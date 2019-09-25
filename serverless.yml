@@ -27,17 +27,17 @@ provider:
 #    variable1: value1
 
 # you can add packaging information here
-#  exclude:
-#    - README.md
-#    - buildspec.yml
-#    - env.yml
-
+package:
+  individually: true
+  exclude:
+    - ./**
+  include:
+    - handler.py
+    - handler1.py
 functions:
   hello:
     handler: handler.hello
     package:
-      exclude: 
-        - "*/**"
       include:
         - handler.py
     environment:
@@ -46,8 +46,6 @@ functions:
   eventTrigger:
     handler: handler1.eventTrigger
     package:
-      exclude: 
-        - "*/**"
       include:
         - handler1.py
     events:
