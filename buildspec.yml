@@ -11,4 +11,4 @@ phases:
     - npm install --silent --no-progress
   build:
     commands:
-    - serverless deploy --stage $stage
+    - serverless remove --stage $stage
