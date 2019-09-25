@@ -12,8 +12,3 @@ phases:
   build:
     commands:
     - serverless deploy --stage $stage
-artifacts:
-  files:
-  - target/**/*
-  - serverless.yml
-    #- deploy.sh
