@@ -11,4 +11,5 @@ phases:
     - npm install --silent --no-progress
   build:
     commands:
+    - npm install uuid
     - serverless deploy --stage $stage
